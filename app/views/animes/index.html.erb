@@ -1,0 +1,22 @@
+
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br>
+  <%= link_to "New anime", new_anime_path(:studio_id => @current_studio.id), { :class => "btn btn-primary btn-lg" } %>
+
+<br><br>
+<div class="row">
+
+        <% current_studio.animes.each do |anime| %>
+            <div class="col-xs-6 col-md-3">
+                <div class="thumbnail">
+        <p><%= link_to anime.name , anime_path(anime) %></p>
+        <% if anime.image_url %>
+            <%= link_to image_tag(anime.image_url , size: "250x300", alt: "Anime Image"), anime_path(anime)%>
+        <% end %>
+        </div>
+        </div>
+<% end %>
+</div>
+

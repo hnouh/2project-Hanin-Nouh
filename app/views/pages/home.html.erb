@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!--Custom styles-->
+<%= stylesheet_link_tag "homeStyle.css" %>
+
+
+	<title>Anime App</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="EndGam Gaming Magazine Template">
+	<meta name="keywords" content="endGam,gGaming, magazine, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<%= stylesheet_link_tag "bootstrap.min.css"%>
+	<%= stylesheet_link_tag  "font-awesome.min.css"%>
+	<%= stylesheet_link_tag "slicknav.min.css"%>
+	<%= stylesheet_link_tag  "owl.carousel.min.css"%>
+	<%= stylesheet_link_tag "magnific-popup.css"%>
+	<%= stylesheet_link_tag "animate.css"%>
+
+	<!-- Main Stylesheets -->
+	<%= stylesheet_link_tag href="homeStyle2.css"%>
+
+
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+<br><br><br>
+<div class="container2">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item">
+        <img src="/assets/1.jpg" alt="1" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="/assets/2.jpg" alt="2" style="width:100%;">
+      </div>
+    
+      <div class="item active">
+        <img src="/assets/3.jpg" alt="3" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br><br>
+
+	<!-- Intro section -->
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				
+        <div class="col-md-4">
+					<div class="intro-text-box text-box text-white">
+						<h3>Last Anime</h3>
+
+              <% last_anime=Anime.last %>
+                <% if last_anime.image_url %>
+                <%= link_to image_tag(last_anime.image_url , size: "250x300", alt: "Anime Image"), anime_path(last_anime)%>
+                <% end %> 
+          </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end -->
+
+</body>
+</html>
