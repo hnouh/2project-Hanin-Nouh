@@ -1,10 +1,9 @@
-# README
-
 ## Anime app
+![Anime app](https://user-images.githubusercontent.com/42039887/129308295-03452fce-ac16-47f9-a6ea-c1d8d7097426.jpg)
 
 ### [DEMO](https://drive.google.com/file/d/1MNJvrBV0ZWK4nr5Li9k7eTzdEozJVVHP/view?usp=sharing)
 
-### Application brefis
+### Application brief
 Anime platform where studios can add-edit-delete their animes and their characters
 So, the relation ship : one studio can have many animes
 character can be in many animes so it is many to many
